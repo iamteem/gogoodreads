@@ -10,6 +10,7 @@ module GoGoodreads
 
     attr :title, :isbn, :isbn13, :image_url,
          :small_image_url, :description,
+         :asin, :url, :link,
          :reviews_count, :num_pages, :authors
 
     def self.initialize_with_node(xml)
@@ -22,10 +23,14 @@ module GoGoodreads
       attrs[:description] = xml.at('description').text
       attrs[:reviews_count] = xml.at('reviews_count').text.to_i
       attrs[:num_pages] = xml.at('num_pages').text.to_i
+      attrs[:asin] = xml.at('asin').text
+      attrs[:url] = xml.at('url').text
+      attrs[:link] = xml.at('link').text
+      attrs.delete_if { |k,v| v.respond_to?(:empty?) && v.empty? }
 
-      instance = new(attrs)
-      instance.initialize_authors_with_nodeset(xml.search('authors > author'))
-      instance
+      book = new(attrs)
+      book.initialize_authors_with_nodeset(xml.search('authors > author'))
+      book
     end
 
     def initialize(attrs = {})
