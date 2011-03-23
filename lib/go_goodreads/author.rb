@@ -1,5 +1,5 @@
 module GoGoodreads
-  class Author
+  class Author < Resource
     attr :author_id, :name, :image_url,
          :small_image_url, :link,
          :average_rating, :ratings_count,
@@ -18,10 +18,6 @@ module GoGoodreads
       attrs[:text_reviews_count] = xml.at('text_reviews_count').text.to_i
 
       new(attrs)
-    end
-
-    def initialize(attrs = {})
-      attrs.each {|k, v| instance_variable_set("@#{ k }", v) }
     end
   end
 end

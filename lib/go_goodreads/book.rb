@@ -1,5 +1,5 @@
 module GoGoodreads
-  class Book
+  class Book < Resource
     extend GoGoodreads::Request
 
     def self.show_by_isbn(isbn, options = {})
@@ -7,14 +7,16 @@ module GoGoodreads
       params.merge!(options)
 
       request('/book/isbn', params) do |xml|
-        initialize_with_node(xml)
+        book = initialize_with_node(xml)
+        book.current_page = params[:page] || 1
+        book
       end
     end
 
     attr :title, :isbn, :isbn13, :image_url,
          :small_image_url, :description,
          :asin, :url, :link,
-         :num_pages, :authors
+         :num_pages, :authors, :reviews
 
     def self.initialize_with_node(xml)
       attrs = {}
@@ -32,15 +34,16 @@ module GoGoodreads
 
       book = new(attrs)
       book.initialize_authors_with_nodeset(xml.search('authors > author'))
+      book.initialize_reviews_with_nodeset(xml.search('reviews > review'))
       book
-    end
-
-    def initialize(attrs = {})
-      attrs.each {|k, v| instance_variable_set("@#{ k }", v) }
     end
 
     def initialize_authors_with_nodeset(xml)
       @authors = xml.map {|n| GoGoodreads::Author.initialize_with_node(n) }
+    end
+
+    def initialize_reviews_with_nodeset(xml)
+      @reviews = xml.map {|n| GoGoodreads::Review.initialize_with_node(n) }
     end
   end
 end

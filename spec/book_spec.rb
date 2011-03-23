@@ -24,6 +24,7 @@ describe GoGoodreads::Book do
       its(:authors)         { should have(1).items }
       its(:url)             { should == "http://www.goodreads.com/book/show/53732.Dune" }
       its(:link)            { should == "http://www.goodreads.com/book/show/53732.Dune" }
+      its(:reviews)         { should have(28).items }
     end
   end
 end
