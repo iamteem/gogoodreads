@@ -1,0 +1,6 @@
+- Book
+- Book Reviews
+- Invalid API Key Exception
+
+Future (right...):
+  - Support OAuth authenticated methods.
