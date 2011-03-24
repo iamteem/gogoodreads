@@ -11,6 +11,3 @@ group :development do
   gem 'webmock'
   gem 'rcov', '>= 0'
 end
-
-gem 'ruby-debug19', :group => :test, :platforms => :mri_19
-gem 'ruby-debug', :group => :test, :platforms => :mri_18
