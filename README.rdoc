@@ -4,7 +4,7 @@ Goodreads API Ruby Interface
 
 == Basics (So Far)
 
-require 'gogoodreads'
+  require 'gogoodreads'
 
   GoGoodreads.configure do |config|
     config.api_key = "somesecretapi"
