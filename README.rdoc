@@ -2,6 +2,16 @@
 
 Goodreads API Ruby Interface
 
+== Basics (So Far)
+
+require 'gogoodreads'
+
+GoGoodreads.configure do |config|
+  config.api_key = "somesecretapi"
+end
+
+GoGoodreads::Book.show_by_isbn('isbnhere')
+
 == Contributing to gogoodreads
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
