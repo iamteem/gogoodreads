@@ -1,5 +1,6 @@
 module GoGoodreads
-  class Shelf < Resource
+  class Shelf
+    include GoGoodreads::Resource
     attr :name
 
     def self.initialize_with_node(xml)

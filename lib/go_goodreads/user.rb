@@ -1,5 +1,7 @@
 module GoGoodreads
-  class User < Resource
+  class User
+    include GoGoodreads::Resource
+
     attr :user_id, :name, :location, :link,
          :image_url, :small_image_url
 

@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/iamteem/gogoodreads"
   gem.license = "MIT"
   gem.summary = %Q{Goodreads API Ruby Interface}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{Allows you to progammatically pull book reviews from Goodreads using its API.}
   gem.email = "iamteem@gmail.com"
   gem.authors = ["Tim Medina"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

@@ -1,5 +1,6 @@
 module GoGoodreads
-  class Book < Resource
+  class Book
+    include GoGoodreads::Resource
     extend GoGoodreads::Request
 
     def self.show_by_isbn(isbn, options = {})
@@ -17,6 +18,8 @@ module GoGoodreads
          :small_image_url, :description,
          :asin, :url, :link,
          :num_pages, :authors, :reviews
+
+    attr_accessor :current_page
 
     def self.initialize_with_node(xml)
       attrs = {}

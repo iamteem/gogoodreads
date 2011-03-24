@@ -1,5 +1,7 @@
 module GoGoodreads
-  class Review < Resource
+  class Review
+    include GoGoodreads::Resource
+
     attr :review_id, :user, :shelves, :rating,
          :votes, :spoiler_flag, :date_added,
          :date_updated, :read_count, :body,

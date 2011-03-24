@@ -1,6 +1,6 @@
-= gogoodreads
+= GoGoodreads
 
-Description goes here.
+Goodreads API Ruby Interface
 
 == Contributing to gogoodreads
  

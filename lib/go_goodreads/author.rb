@@ -1,5 +1,7 @@
 module GoGoodreads
-  class Author < Resource
+  class Author
+    include GoGoodreads::Resource
+
     attr :author_id, :name, :image_url,
          :small_image_url, :link,
          :average_rating, :ratings_count,
