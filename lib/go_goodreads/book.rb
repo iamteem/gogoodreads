@@ -3,6 +3,20 @@ module GoGoodreads
     include GoGoodreads::Resource
     extend GoGoodreads::Request
 
+    attribute :title
+    attribute :isbn
+    attribute :isbn13
+    attribute :image_url
+    attribute :small_image_url
+    attribute :description
+    attribute :asin
+    attribute :url
+    attribute :link
+    attribute :num_pages, :type => Integer
+    attr      :authors, :reviews
+
+    attr_accessor :current_page
+
     def self.show_by_isbn(isbn, options = {})
       params = { :isbn => isbn }
       params.merge!(options)
@@ -14,25 +28,9 @@ module GoGoodreads
       end
     end
 
-    attr :title, :isbn, :isbn13, :image_url,
-         :small_image_url, :description,
-         :asin, :url, :link,
-         :num_pages, :authors, :reviews
-
-    attr_accessor :current_page
 
     def self.initialize_with_node(xml)
-      attrs = {}
-      attrs[:title] = xml.at('title').text
-      attrs[:isbn] = xml.at('isbn').text
-      attrs[:isbn13] = xml.at('isbn13').text
-      attrs[:image_url] = xml.at('image_url').text
-      attrs[:small_image_url] = xml.at('small_image_url').text
-      attrs[:description] = xml.at('description').text
-      attrs[:num_pages] = xml.at('num_pages').text.to_i
-      attrs[:asin] = xml.at('asin').text
-      attrs[:url] = xml.at('url').text
-      attrs[:link] = xml.at('link').text
+      attrs = to_attributes!(xml)
       attrs.delete_if { |k,v| v.respond_to?(:empty?) && v.empty? }
 
       book = new(attrs)

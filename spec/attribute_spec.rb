@@ -4,9 +4,8 @@ describe GoGoodreads::Attributes do
   before(:all) do
     class Thing
       include GoGoodreads::Resource
-      include GoGoodreads::Attributes
 
-      attribute :klazz_id, :map_from => 'id'
+      attribute :klazz_id,   :map_from => 'id'
       attribute :page_count, :type => Integer
       attribute :simple
       attribute :date_added, :type => Time
@@ -30,6 +29,4 @@ describe GoGoodreads::Attributes do
     @thing.simple.should == "Hello, World!"
     @thing.date_added.should == Time.parse("Fri Jun 01 19:11:54 -0700 2007")
   end
-
-  it "can override the mapping of attributes"
 end

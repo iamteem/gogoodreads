@@ -21,21 +21,17 @@ module GoGoodreads
       end
 
       # @param [Nokogiri::Node] xml the xml to be used in getting the attributes
-      # @param [Hash] options settings for customizing the way values are got
-      # @option option [Proc] using a proc object to be used when finding the value in an xml node
+      # @param [Hash] options settings for overriding default attribute configuration (key is the name of the attribute, value is the options hash)
       def to_attributes!(xml, options = {})
         attrs = {}
 
         @attributes.each do |attr, config|
-          opts = options.merge(config)
+          opts = config.merge(options[attr] || {})
           map_from = opts[:map_from]
           callable = opts[:using]
           val = callable.call(xml, map_from)
-          puts val, opts[:type]
-          attrs[attr] = _convert(val, opts[:type])
+          attrs[attr] = _convert(val, opts[:type]) rescue val
         end
-
-        attrs.each {|k, v| puts "#{ k } #{ v.class } #{ v }" }
 
         attrs
       end
@@ -51,6 +47,8 @@ module GoGoodreads
           Time.parse(val)
         elsif type == Integer
           Integer(val)
+        elsif type == Float
+          Float(val)
         else
           val
         end

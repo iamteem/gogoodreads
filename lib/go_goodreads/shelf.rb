@@ -1,10 +1,11 @@
 module GoGoodreads
   class Shelf
     include GoGoodreads::Resource
-    attr :name
+    attribute :name
 
     def self.initialize_with_node(xml)
-      new(:name => xml['name'])
+      attrs = to_attributes!(xml, :name => {:using => lambda {|n, from| xml[from] }})
+      new(attrs)
     end
   end
 end

@@ -2,24 +2,17 @@ module GoGoodreads
   class Author
     include GoGoodreads::Resource
 
-    attr :author_id, :name, :image_url,
-         :small_image_url, :link,
-         :average_rating, :ratings_count,
-         :text_reviews_count
+    attribute :author_id, :map_from => 'id'
+    attribute :name
+    attribute :image_url
+    attribute :small_image_url
+    attribute :link
+    attribute :average_rating, :type => Float
+    attribute :ratings_count, :type => Integer
+    attribute :text_reviews_count, :type => Integer
 
     def self.initialize_with_node(xml)
-      attrs = {}
-
-      attrs[:author_id] = xml.at('id').text
-      attrs[:name] = xml.at('name').text
-      attrs[:image_url] = xml.at('image_url').text
-      attrs[:small_image_url] = xml.at('small_image_url').text
-      attrs[:link] = xml.at('link').text
-      attrs[:average_rating] = xml.at('average_rating').text.to_f
-      attrs[:ratings_count] = xml.at('ratings_count').text.to_i
-      attrs[:text_reviews_count] = xml.at('text_reviews_count').text.to_i
-
-      new(attrs)
+      new(to_attributes!(xml))
     end
   end
 end
