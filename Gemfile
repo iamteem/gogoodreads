@@ -1,7 +1,5 @@
 source :rubygems
 
-gemspec
-
 group :development do
   gem 'rspec', '~> 2.3.0'
   gem 'yard', '~> 0.6.0'
