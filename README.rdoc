@@ -6,11 +6,11 @@ Goodreads API Ruby Interface
 
 require 'gogoodreads'
 
-GoGoodreads.configure do |config|
-  config.api_key = "somesecretapi"
-end
+  GoGoodreads.configure do |config|
+    config.api_key = "somesecretapi"
+  end
 
-GoGoodreads::Book.show_by_isbn('isbnhere')
+  GoGoodreads::Book.show_by_isbn('isbnhere')
 
 == Contributing to gogoodreads
  
