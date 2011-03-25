@@ -14,7 +14,7 @@ module GoGoodreads
       def attribute(name, options = {})
         default_options = { :type => String, :map_from => name }
         opts = default_options.merge(options)
-        opts[:using] ||= lambda {|xml, from| xml.at(from).text }
+        opts[:using] ||= lambda {|xml, from| (xml > from.to_s).text }
         @attributes ||= {}
         @attributes[name] = opts
         attr name

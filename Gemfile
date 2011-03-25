@@ -1,5 +1,7 @@
 source :rubygems
 
+gem 'nokogiri'
+
 group :development do
   gem 'rspec', '~> 2.3.0'
   gem 'yard', '~> 0.6.0'
@@ -9,3 +11,5 @@ group :development do
   gem 'webmock'
   gem 'rcov', '>= 0'
 end
+
+gem 'ruby-debug19'

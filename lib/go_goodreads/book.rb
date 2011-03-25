@@ -13,21 +13,27 @@ module GoGoodreads
     attribute :url
     attribute :link
     attribute :num_pages, :type => Integer
+    attribute :text_reviews_count, :type => Integer
+    attribute :average_rating, :type => Float
+
     attr      :authors, :reviews
 
     attr_accessor :current_page
 
+    # @param String isbn ISBN of the book
+    # @param Hash option Options
+    # @option option Integer page Page number (default: 1)
+    # @returns GoGoodreads::Book
     def self.show_by_isbn(isbn, options = {})
       params = { :isbn => isbn }
       params.merge!(options)
 
       request('/book/isbn', params) do |xml|
-        book = initialize_with_node(xml)
+        book = initialize_with_node(xml.root.at('book'))
         book.current_page = params[:page] || 1
         book
       end
     end
-
 
     def self.initialize_with_node(xml)
       attrs = to_attributes!(xml)
