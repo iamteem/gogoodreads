@@ -15,6 +15,12 @@ module GoGoodreads
     attribute :num_pages, :type => Integer
     attribute :text_reviews_count, :type => Integer
     attribute :average_rating, :type => Float
+    attribute :data
+    attribute :language_code
+    attribute :publisher
+    attribute :publication_day, :type => Integer
+    attribute :publication_month, :type => Integer
+    attribute :publication_year, :type => Integer
 
     attr      :authors, :reviews
 
@@ -51,6 +57,13 @@ module GoGoodreads
 
     def initialize_reviews_with_nodeset(xml)
       @reviews = xml.map {|n| GoGoodreads::Review.initialize_with_node(n) }
+    end
+
+
+    def publication_date
+      if publication_day && publication_year && publication_month
+        Date.new(publication_year, publication_month, publication_day)
+      end
     end
   end
 end

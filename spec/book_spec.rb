@@ -27,6 +27,9 @@ describe GoGoodreads::Book do
       its(:reviews)            { should have(28).items }
       its(:average_rating)     { should == 3.93 }
       its(:text_reviews_count) { should == 345 }
+      its(:language_code)      { should == "eng" }
+      its(:publisher)          { should be_nil }
+      its(:publication_date)   { should be_nil }
     end
   end
 end

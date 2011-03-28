@@ -30,7 +30,9 @@ module GoGoodreads
           map_from = opts[:map_from]
           callable = opts[:using]
           val = callable.call(xml, map_from)
-          attrs[attr] = _convert(val, opts[:type]) rescue val
+          unless val.to_s.empty?
+            attrs[attr] = _convert(val, opts[:type]) rescue val
+          end
         end
 
         attrs
