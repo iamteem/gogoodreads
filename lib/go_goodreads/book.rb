@@ -20,13 +20,13 @@ module GoGoodreads
 
     attr_accessor :current_page
 
-    # @param String isbn ISBN of the book
-    # @param Hash option Options
-    # @option option Integer page Page number (default: 1)
-    # @returns GoGoodreads::Book
-    def self.show_by_isbn(isbn, options = {})
+    # @param [String] isbn ISBN of the book
+    # @param [Hash] opts Option passed to the API call, except the ISBN.
+    # @option opts [Integer] :page (1) Page number
+    # @return [GoGoodreads::Book]
+    def self.show_by_isbn(isbn, opts = {})
       params = { :isbn => isbn }
-      params.merge!(options)
+      params.merge!(opts)
 
       request('/book/isbn', params) do |xml|
         book = initialize_with_node(xml.root.at('book'))

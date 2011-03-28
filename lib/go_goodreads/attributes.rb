@@ -7,16 +7,16 @@ module GoGoodreads
     module ClassMethods
 
       # @param [Symbol] name the name of the attribute
-      # @param [Hash] options the options to configure the attribute
-      # @option option [Class] type the class of the parsed value of the attribute
-      # @option option [Proc] using a proc object to be used when finding the value in an xml node
-      # @option option [Symbol] map_from a symbol where the value is placed when calling to_attributes!
-      def attribute(name, options = {})
+      # @param [Hash] opts the options to configure the attribute
+      # @option opts [Class]  :type the class of the parsed value of the attribute
+      # @option opts [Proc]   :using a proc object to be used when finding the value in an xml node
+      # @option opts [Symbol] :map_from a symbol where the value is placed when calling to_attributes!
+      def attribute(name, opts = {})
         default_options = { :type => String, :map_from => name }
-        opts = default_options.merge(options)
-        opts[:using] ||= lambda {|xml, from| (xml > from.to_s).text }
+        setting = default_options.merge(opts)
+        setting[:using] ||= lambda {|xml, from| (xml > from.to_s).text }
         @attributes ||= {}
-        @attributes[name] = opts
+        @attributes[name] = setting
         attr name
       end
 
@@ -40,6 +40,7 @@ module GoGoodreads
         {"true" => true, "false" => false}[val]
       end
 
+    private
       def _convert(val, type)
         if type == ::GoGoodreads::Attributes::Boolean
           Boolean(val)
