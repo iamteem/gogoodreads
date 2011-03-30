@@ -1,16 +1,15 @@
 require 'spec_helper'
 
 describe GoGoodreads::Book do
-  use_vcr_cassette 'book_by_isbn'
-
-  before(:each) do
-    GoGoodreads.configure do |config|
-      config.api_key = "1IlntIwcUm5CpTbQhu7Zg"
-    end
-  end
-
   describe ".show_by_isbn" do
+    use_vcr_cassette 'book_by_isbn'
     context "isbn is 0441172717" do
+      before(:each) do
+        GoGoodreads.configure do |config|
+          config.api_key = "1IlntIwcUm5CpTbQhu7Zg"
+        end
+      end
+
       subject { GoGoodreads::Book.show_by_isbn("0441172717") }
 
       its(:title)              { should == "Dune (Dune Chronicles, #1)" }
@@ -30,6 +29,22 @@ describe GoGoodreads::Book do
       its(:language_code)      { should == "eng" }
       its(:publisher)          { should be_nil }
       its(:publication_date)   { should be_nil }
+    end
+
+    context "bad API key" do
+      use_vcr_cassette 'book_by_isbn_bad_api_key'
+
+      before(:each) do
+        GoGoodreads.configure do |config|
+          config.api_key = "1IlntIwcUm5CpTbQhu7Zf"
+        end
+      end
+
+      it "should raise BadAPIKey" do
+        lambda {
+          GoGoodreads::Book.show_by_isbn("0441172717")
+        }.should raise_error(::GoGoodreads::BadApiKey)
+      end
     end
   end
 end

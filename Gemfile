@@ -13,3 +13,4 @@ group :development do
 end
 
 gem 'ruby-debug19'
+gem 'rest-client'

@@ -18,4 +18,7 @@ module GoGoodreads
   def self.configure(&block)
     yield GoGoodreads::Config
   end
+
+
+  class BadApiKey < Exception; end
 end

@@ -5,6 +5,10 @@
     uri: http://www.goodreads.com:80/book/isbn?isbn=0441172717&key=1IlntIwcUm5CpTbQhu7Zg
     body: 
     headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -12,98 +16,291 @@
     headers: 
       content-type: 
       - application/xml; charset=utf-8
+      transfer-encoding: 
+      - chunked
       status: 
       - "200"
       x-powered-by: 
       - Phusion Passenger (mod_rails/mod_rack) 3.0.0
       etag: 
-      - "\"38c8128410a791eda136304e542392ca\""
+      - "\"49ffb5c74faae6bc7795908d6d72217a\""
       x-runtime: 
-      - "245"
-      content-length: 
-      - "52001"
+      - "299"
       set-cookie: 
-      - _session_id=88e01ae88a5d8e352ae198cab36cdee0; domain=.goodreads.com; path=/; HttpOnly
+      - _session_id=7ff9024bcedf56f29770cb45618116ff; domain=.goodreads.com; path=/; HttpOnly
       cache-control: 
       - private, max-age=0, must-revalidate
       server: 
       - nginx/0.8.52 + Phusion Passenger 3.0.0 (mod_rails/mod_rack)
-    body: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\
-      <GoodreadsResponse>\n\
-      \t<Request>\n\
-      \t\t<authentication>true</authentication>\n\
-      \t\t\t\t<key><![CDATA[1IlntIwcUm5CpTbQhu7Zg]]></key>\n\
-      \t\t    <method><![CDATA[book_isbn]]></method>\n\
-      \t</Request>\n\
-      \t<book>\n  <id>53732</id>\n  <title><![CDATA[Dune (Dune Chronicles, #1)]]></title>\n  <isbn><![CDATA[0441172717]]></isbn>\n  <isbn13><![CDATA[9780441172719]]></isbn13>\n  <asin><![CDATA[]]></asin>\n  <image_url>http://photo.goodreads.com/books/1170430859m/53732.jpg</image_url>\n  <small_image_url>http://photo.goodreads.com/books/1170430859s/53732.jpg</small_image_url>\n  <publication_year></publication_year>\n  <publication_month></publication_month>\n  <publication_day></publication_day>\n  <publisher></publisher>\n  <language_code>eng</language_code>\n  <description><![CDATA[This Hugo and Nebula Award winner tells the sweeping tale of a desert planet called Arrakis, the focus of an intricate power struggle in a byzantine interstellar empire. Arrakis is the sole source of Melange, the &quot;spice of spices.&quot; Melange is necessary for interstellar travel and grants psychic powers and longevity, so whoever controls it wields great influence. The troubles begin when stewardship of Arrakis is transferred by the Emperor from the Harkonnen Noble House to House Atreides.  The Harkonnens don't want to give up their privilege, though, and through sabotage and treachery they cast young Duke Paul Atreides out into the planet's harsh environment to die.  There he falls in with the Fremen, a tribe of desert dwellers who become the basis of the army with which he will reclaim what's rightfully his. Paul Atreides, though, is far more than just a usurped duke. He might be the end product of a very long-term genetic experiment designed to breed a super human; he might be a messiah.  His struggle is at the center of a nexus of powerful people and events, and the repercussions will be felt throughout the Imperium. Dune is one of the most famous science fiction novels ever written, and deservedly so.  The setting is elaborate and ornate, the plot labyrinthine, the adventures exciting. Five sequels follow. --Brooks Peck]]></description>\n  <work>\n  <best_book_id type=\"integer\">234225</best_book_id>\n  <books_count type=\"integer\">109</books_count>\n  <desc_user_id type=\"integer\">-30</desc_user_id>\n  <id type=\"integer\">3634639</id>\n  <media_type>book</media_type>\n  <original_language_id nil=\"true\" type=\"integer\"></original_language_id>\n  <original_publication_day nil=\"true\" type=\"integer\"></original_publication_day>\n  <original_publication_month nil=\"true\" type=\"integer\"></original_publication_month>\n  <original_publication_year type=\"integer\">1965</original_publication_year>\n  <original_title>Dune</original_title>\n  <rating_dist>5:47023|4:31053|3:20374|2:7790|1:6405|total:112645</rating_dist>\n  <ratings_count type=\"integer\">113248</ratings_count>\n  <ratings_sum type=\"integer\">444715</ratings_sum>\n  <reviews_count type=\"integer\">151388</reviews_count>\n  <text_reviews_count type=\"integer\">3348</text_reviews_count>\n\
-      </work>\n\n  <average_rating><![CDATA[3.93]]></average_rating>\n    <num_pages><![CDATA[535]]></num_pages>\n    <ratings_count><![CDATA[3474]]></ratings_count>\n  <text_reviews_count><![CDATA[345]]></text_reviews_count>\n  \n  <url><![CDATA[http://www.goodreads.com/book/show/53732.Dune]]></url>\n  <link><![CDATA[http://www.goodreads.com/book/show/53732.Dune]]></link>\n  <authors>\n    <author>\n    <id>58</id>\n        <name><![CDATA[Frank Herbert]]></name>\n    <image_url><![CDATA[http://photo.goodreads.com/authors/1168661521p5/58.jpg]]></image_url>\n    <small_image_url><![CDATA[http://photo.goodreads.com/authors/1168661521p2/58.jpg]]></small_image_url>\n    <link><![CDATA[http://www.goodreads.com/author/show/58.Frank_Herbert]]></link>\n    <average_rating>3.83</average_rating>\n    <ratings_count>179357</ratings_count>\n    <text_reviews_count>5350</text_reviews_count>\n  </author>\n  </authors>\n    <reviews start=\"1\" end=\"28\" total=\"151269\">\n    \n      <review>\n  <id>38209515</id>\n    <user>\n  <id>1713956</id>\n  <name><![CDATA[Manny]]></name>\n  <location><![CDATA[Cambridge, C3, The United Kingdom]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/1713956-manny]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1227275844p3/1713956.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1227275844p2/1713956.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>109</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"science-fiction\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Thu Jan 01 00:00:00 -0800 1970</read_at>\n  <date_added>Thu Nov 20 06:09:14 -0800 2008</date_added>\n  <date_updated>Fri Mar 20 07:16:04 -0700 2009</date_updated>\n  <read_count>5</read_count>\n      <body>\n      <![CDATA[There's a characteristically witty essay by Borges about a man who rewrites <em>Don Quixote</em>, many centuries after Cervantes. He publishes a novel with the same title, containing the same words in the same order. But, as Borges shows you, the different cultural context means it's a completely new book! W...\n              <a href=\"http://www.goodreads.com/review/show/38209515\">more...</a>\n            ]]>\n    </body>\n    <comments_count>17</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/38209515]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/38209515]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>140124821</id>\n    <user>\n  <id>2863914</id>\n  <name><![CDATA[Joel]]></name>\n  <location><![CDATA[Oak Park, IL]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/2863914-joel]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1288885128p3/2863914.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1288885128p2/2863914.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>15</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"2011\" />\n        <shelf name=\"book-club\" />\n        <shelf name=\"classics\" />\n        <shelf name=\"sci-fi-fantasy\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at>Fri Jan 28 00:00:00 -0800 2011</started_at>\n  <read_at>Fri Mar 11 00:00:00 -0800 2011</read_at>\n  <date_added>Tue Jan 11 20:52:44 -0800 2011</date_added>\n  <date_updated>Sun Mar 13 12:46:18 -0700 2011</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[DBR to follow, at Ceridwen's request. She must have used one of her Bene Gesserit tricks on me.\r<br/>\r<br/>***\r<br/>Dune. Dune is a fascinating book. A classic of science-fiction, it plays equally as fantasy and allegory. It is deeply textured, richly layered. And if you want to read a sensible revi...\n              <a href=\"http://www.goodreads.com/review/show/140124821\">more...</a>\n            ]]>\n    </body>\n    <comments_count>25</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/140124821]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/140124821]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>23505468</id>\n    <user>\n  <id>1205220</id>\n  <name><![CDATA[Matt]]></name>\n  <location><![CDATA[Columbus, OH]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/1205220-matt]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1216068593p3/1205220.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1216068593p2/1205220.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>33</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"fantasy\" />\n        <shelf name=\"science-fiction\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Sun Jul 01 00:00:00 -0700 1984</read_at>\n  <date_added>Mon Jun 02 06:54:06 -0700 2008</date_added>\n  <date_updated>Thu Sep 04 09:13:08 -0700 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[Like most of my five star books, I\xE2\x80\x99ve read Dune multiple times.  In fact, I\xE2\x80\x99d say that what makes a book more than just enjoyable and instead truly amazing is that you want to read it more than once and are rewarded for doing so.  I\xE2\x80\x99ve probably read Dune six times, and I\xE2\x80\x99ve never gotten tired of it ...\n              <a href=\"http://www.goodreads.com/review/show/23505468\">more...</a>\n            ]]>\n    </body>\n    <comments_count>6</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/23505468]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/23505468]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>2348449</id>\n    <user>\n  <id>147818</id>\n  <name><![CDATA[John]]></name>\n  <location><![CDATA[The United States]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/147818-john]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1276202553p3/147818.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1276202553p2/147818.jpg]]></small_image_url>\n\
-      </user>\n        <rating>2</rating>\n  <votes>23</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[Science fiction readers, fantasy readers, speculative fiction readers]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Fri Dec 01 00:00:00 -0800 2006</read_at>\n  <date_added>Sun Jun 24 23:28:28 -0700 2007</date_added>\n  <date_updated>Wed Dec 16 22:36:40 -0800 2009</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[No one should argue the importance <em>Dune</em>. It laid the foundations for a great deal of the themes and constructs in modern science fiction. Frank Herbert was as important to the genre as Isaac Asimov and Arthur Clarke. Unfortunately, just like them, he's quite dated, and his books can be a labor to re...\n              <a href=\"http://www.goodreads.com/review/show/2348449\">more...</a>\n            ]]>\n    </body>\n    <comments_count>4</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/2348449]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/2348449]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>1598115</id>\n    <user>\n  <id>84023</id>\n  <name><![CDATA[Keely]]></name>\n  <location><![CDATA[Belleville, NJ]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/84023-keely]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1274333636p3/84023.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1274333636p2/84023.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>12</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"american\" />\n        <shelf name=\"childhood\" />\n        <shelf name=\"novel\" />\n        <shelf name=\"reviewed\" />\n        <shelf name=\"sci-fi\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at></read_at>\n  <date_added>Fri Jun 01 19:11:54 -0700 2007</date_added>\n  <date_updated>Thu Dec 09 21:18:29 -0800 2010</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[People often forget that this series is what innovated our modern concept of science fiction (up until Neuromancer and The Martix, at least). Dune took the Space Opera and asked if it might be more than spandex, dildo-shaped rockets, and scantily-clad green women. Herbert created a vast and complex ...\n              <a href=\"http://www.goodreads.com/review/show/1598115\">more...</a>\n            ]]>\n    </body>\n    <comments_count>2</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/1598115]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/1598115]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>20320</id>\n    <user>\n  <id>1994</id>\n  <name><![CDATA[Banzai]]></name>\n  <location><![CDATA[Villa Park, IL]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/1994-banzai]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1219416776p3/1994.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1219416776p2/1994.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>16</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Sat Jan 01 00:00:00 -0800 2000</read_at>\n  <date_added>Mon Feb 05 09:38:13 -0800 2007</date_added>\n  <date_updated>Wed Dec 16 15:55:53 -0800 2009</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[I guess I'm one of the few that bridge the gap between the Pride and Prejudice camp and the Dune camp. I loved both.\r<br/>\r<br/>Dune isn't a light, enjoyable read. At times it reads more like excerpts from geology, ecology, zoology, sociology, pscyhology, and political textbooks. The characters are ...\n              <a href=\"http://www.goodreads.com/review/show/20320\">more...</a>\n            ]]>\n    </body>\n    <comments_count>4</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/20320]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/20320]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>6974116</id>\n    <user>\n  <id>368858</id>\n  <name><![CDATA[Adam]]></name>\n  <location><![CDATA[Ashland, OH]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/368858-adam]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1189456780p3/368858.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1189456780p2/368858.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>8</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Sat Apr 01 00:00:00 -0800 2000</read_at>\n  <date_added>Fri Sep 28 20:08:34 -0700 2007</date_added>\n  <date_updated>Sun Sep 14 09:22:12 -0700 2008</date_updated>\n  <read_count>5-6</read_count>\n      <body>\n      <![CDATA[I've read and reread this novel across the years, and I'll continue to do so.\r<br/>\r<br/>Dune was Frank Herbert's imagination breathed into the pages of a single book.  He wrote numerous others to follow it, all of which continue to explore and flesh out the world he introduced us to in this, the fi...\n              <a href=\"http://www.goodreads.com/review/show/6974116\">more...</a>\n            ]]>\n    </body>\n    <comments_count>3</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/6974116]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/6974116]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>93981680</id>\n    <user>\n  <id>1376766</id>\n  <name><![CDATA[Becky]]></name>\n  <location><![CDATA[Wilkes Barre, PA]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/1376766-becky]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1284393199p3/1376766.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1284393199p2/1376766.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>7</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"--2010--\" />\n        <shelf name=\"blog_reviews\" />\n        <shelf name=\"classics\" />\n        <shelf name=\"highly-recommended\" />\n        <shelf name=\"owned\" />\n        <shelf name=\"political\" />\n        <shelf name=\"religion-related\" />\n        <shelf name=\"reviewed\" />\n        <shelf name=\"science-fiction\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at>Sat Apr 24 00:00:00 -0700 2010</started_at>\n  <read_at>Sat May 01 00:00:00 -0700 2010</read_at>\n  <date_added>Sat Mar 13 21:11:43 -0800 2010</date_added>\n  <date_updated>Thu Aug 05 10:05:25 -0700 2010</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[This is one of those books that I've always thought that I should read, but never actually wanted to read, simply because I thought that it would have to be tedious and dry and, I hate to say it, boring. Which goes to show what a poor book-cover judge I am, because this book was anything but tedious...\n              <a href=\"http://www.goodreads.com/review/show/93981680\">more...</a>\n            ]]>\n    </body>\n    <comments_count>16</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/93981680]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/93981680]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>23171867</id>\n    <user>\n  <id>1188122</id>\n  <name><![CDATA[Ben]]></name>\n  <location><![CDATA[Thunder Bay, ON, Canada]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/1188122-ben-babcock]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1211839871p3/1188122.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1211839871p2/1188122.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>6</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"2011-read\" />\n        <shelf name=\"favourites\" />\n        <shelf name=\"own\" />\n        <shelf name=\"posthuman\" />\n        <shelf name=\"religion-fiction\" />\n        <shelf name=\"science-fiction\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at>Sat Feb 05 00:00:00 -0800 2011</started_at>\n  <read_at>Sat Feb 12 00:00:00 -0800 2011</read_at>\n  <date_added>Wed May 28 18:06:16 -0700 2008</date_added>\n  <date_updated>Sat Feb 12 22:32:12 -0800 2011</date_updated>\n  <read_count>3</read_count>\n      <body>\n      <![CDATA[<strong>Second review (Reviewed on February 12, 2011).</strong>\r<br/>\r<br/><em>Dune</em> is a classic because it tells a classic story well. It combines two plots that I love: a vast political intrigue with an intimate family conflict. The Atreides and Harkonnens are related by blood; their feud is a blood feud going back ge...\n              <a href=\"http://www.goodreads.com/review/show/23171867\">more...</a>\n            ]]>\n    </body>\n    <comments_count>0</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/23171867]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/23171867]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>8240703</id>\n    <user>\n  <id>441385</id>\n  <name><![CDATA[Donovan]]></name>\n  <location><![CDATA[Chicago, IL]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/441385-donovan]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1298491418p3/441385.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1298491418p2/441385.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>9</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[anyone who thinks they love StarWars]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Thu Mar 01 00:00:00 -0800 2007</read_at>\n  <date_added>Thu Oct 25 13:04:51 -0700 2007</date_added>\n  <date_updated>Thu Oct 25 13:04:51 -0700 2007</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[I had never read <u>Dune</u>. I can\xE2\x80\x99t put my finger on exactly why I hadn\xE2\x80\x99t read it; although, I do have a nebulous memory of picking it up and not being able to get in to it. I know for a fact that I\xE2\x80\x99d read the closing line previously, which is something I never do prior to reading a book; so that is real...\n              <a href=\"http://www.goodreads.com/review/show/8240703\">more...</a>\n            ]]>\n    </body>\n    <comments_count>1</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/8240703]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/8240703]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>20670476</id>\n    <user>\n  <id>667084</id>\n  <name><![CDATA[Cassidy]]></name>\n  <location><![CDATA[The United States]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/667084-cassidy]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1197253437p3/667084.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1197253437p2/667084.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>6</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[People with flexibly discerning taste, and who don't mind a lot of glossary checks..]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Fri May 02 00:00:00 -0700 2008</read_at>\n  <date_added>Mon Apr 21 14:43:47 -0700 2008</date_added>\n  <date_updated>Mon May 05 18:19:57 -0700 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[Frank Herbert\r<br/>Dune\r<br/>Philadelphia: Chilton Book Company, 1965\r<br/>pp. 483 (without appendices and glossary), 539 (with app. and glos.), unpriced\r<br/>ISBN: N/A\r<br/>\r<br/>     Commonly billed as the best-selling science fiction novel of all time, Dune, an expansive tale of intrigue, religio...\n              <a href=\"http://www.goodreads.com/review/show/20670476\">more...</a>\n            ]]>\n    </body>\n    <comments_count>1</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/20670476]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/20670476]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>15306545</id>\n    <user>\n  <id>891651</id>\n  <name><![CDATA[Karen]]></name>\n  <location><![CDATA[San Diego, CA]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/891651-karen]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1208720825p3/891651.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1208720825p2/891651.jpg]]></small_image_url>\n\
-      </user>\n        <rating>2</rating>\n  <votes>4</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Thu Feb 28 00:00:00 -0800 2008</read_at>\n  <date_added>Tue Feb 12 22:41:55 -0800 2008</date_added>\n  <date_updated>Fri Feb 29 00:00:34 -0800 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[I've read this before and liked it; several portions stick vividly in my mind but I never read the rest of the series. I still don't expect to read the rest of the series, but my friend just read it and has brought it up a few times in conversation so when they had it on the &quot;Librarians' Picks&quot;...\n              <a href=\"http://www.goodreads.com/review/show/15306545\">more...</a>\n            ]]>\n    </body>\n    <comments_count>1</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/15306545]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/15306545]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>14597388</id>\n    <user>\n  <id>82278</id>\n  <name><![CDATA[Jacob]]></name>\n  <location><![CDATA[Hanoi, Viet Nam]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/82278-jacob]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1285757074p3/82278.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1285757074p2/82278.jpg]]></small_image_url>\n\
-      </user>\n        <rating>0</rating>\n  <votes>5</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at></read_at>\n  <date_added>Tue Feb 05 00:21:07 -0800 2008</date_added>\n  <date_updated>Sun Feb 10 18:14:25 -0800 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[If this isn't a formative text, then I don't know what is. I figure evangelicals have the bible, and usually a regressive translation at that, while my family had weird science fiction novels. One that all ten of my brothers and sisters read was Dune. It's true. I grew up in a large family. A sprawl...\n              <a href=\"http://www.goodreads.com/review/show/14597388\">more...</a>\n            ]]>\n    </body>\n    <comments_count>3</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/14597388]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/14597388]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>5005651</id>\n    <user>\n  <id>304412</id>\n  <name><![CDATA[Matt]]></name>\n  <location><![CDATA[Seattle, WA]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/304412-matt]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1192132393p3/304412.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1192132393p2/304412.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>6</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[Everybody]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Sun Jan 01 00:00:00 -0800 1984</read_at>\n  <date_added>Thu Aug 23 09:56:11 -0700 2007</date_added>\n  <date_updated>Thu Oct 11 12:09:44 -0700 2007</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[This is the best book ever written. Cerebrally stimulating for anyone. When we attempt to understand why entertainment of this caliber (Lord of the Rings, Star Wars) and mass appeal (Harry Potter) resonates so strongly with us, many are quick to utilize Jungian archetypes to support such effects. \r<br/>...\n              <a href=\"http://www.goodreads.com/review/show/5005651\">more...</a>\n            ]]>\n    </body>\n    <comments_count>2</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/5005651]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/5005651]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>14145629</id>\n    <user>\n  <id>858949</id>\n  <name><![CDATA[Chris]]></name>\n  <location><![CDATA[Osaka, Japan]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/858949-chris]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1208350750p3/858949.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1208350750p2/858949.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>4</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"science-fiction\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Tue Jan 29 00:00:00 -0800 2008</read_at>\n  <date_added>Thu Jan 31 06:36:48 -0800 2008</date_added>\n  <date_updated>Thu Jan 31 06:47:15 -0800 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[When I was a kid, I tried about a dozen times to get through this book. My mom loved it, so I figured I'd give it a try, but this book definitely has a high learning curve and I had low patience.\r<br/>\r<br/>Years later, of course, when I knew something more about politics, religion, science and life...\n              <a href=\"http://www.goodreads.com/review/show/14145629\">more...</a>\n            ]]>\n    </body>\n    <comments_count>0</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/14145629]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/14145629]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>6591463</id>\n    <user>\n  <id>126262</id>\n  <name><![CDATA[Brooke]]></name>\n  <location><![CDATA[Hilliard, OH]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/126262-brooke]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1181591671p3/126262.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1181591671p2/126262.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>7</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"2008\" />\n        <shelf name=\"science-fiction\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Sat Sep 13 00:00:00 -0700 2008</read_at>\n  <date_added>Sat Sep 22 00:08:50 -0700 2007</date_added>\n  <date_updated>Sat Sep 13 17:55:17 -0700 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[I've never given a book 5 stars instantly upon finishing it. My 5-star favorites became favorites after they had time to stick around in my mind for a year or so while my devotion to them grew. It's entirely possible Dune will join them in the future, but right now it's hard to tell. If I could, I w...\n              <a href=\"http://www.goodreads.com/review/show/6591463\">more...</a>\n            ]]>\n    </body>\n    <comments_count>3</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/6591463]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/6591463]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>48120743</id>\n    <user>\n  <id>1748656</id>\n  <name><![CDATA[Beth]]></name>\n  <location><![CDATA[The United States]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/1748656-beth]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1231095279p3/1748656.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1231095279p2/1748656.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>2</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[people with interests in vermiculture, genetic engineering, and people facing water rationing]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at></read_at>\n  <date_added>Tue Mar 03 11:15:04 -0800 2009</date_added>\n  <date_updated>Tue Mar 03 11:50:09 -0800 2009</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[Sitting here on the desert planet -- uh State, Arakkis -- I mean California, I'm staring in amazement as water actually falls from the sky. \r<br/>\r<br/>This grand sprawling book has a lot to offer: genetic engineer witches, religion as premeditated social engineering, amazing heroic islamists -- I m...\n              <a href=\"http://www.goodreads.com/review/show/48120743\">more...</a>\n            ]]>\n    </body>\n    <comments_count>7</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/48120743]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/48120743]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>47266993</id>\n    <user>\n  <id>1019174</id>\n  <name><![CDATA[Terence]]></name>\n  <location><![CDATA[Covina, CA]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/1019174-terence]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1282879833p3/1019174.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1282879833p2/1019174.jpg]]></small_image_url>\n\
-      </user>\n        <rating>3</rating>\n  <votes>4</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"audio-books\" />\n        <shelf name=\"sf-fantasy\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Mon Mar 09 09:12:31 -0700 2009</read_at>\n  <date_added>Mon Feb 23 10:49:08 -0800 2009</date_added>\n  <date_updated>Mon Mar 09 09:12:31 -0700 2009</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[Don't mistake me, <em>Dune</em>, the novel, retains its 4+ stars in my heavens. This audio version gets the lesser rating because of deficiencies in presentation.\r<br/>\r<br/>The good side of the CD is that, as happened while <em>listening</em> to Tolkien's <a href=\"http://www.goodreads.com/book/show/18512.The_Return_of_the_King_The_Lord_of_the_Rings_Part_3_\" title=\"The Return of the King (The Lord of the Rings, Part 3) by J.R.R. Tolkien\">The Silmarillion</a>, I heard a lot of things I had missed or glo...\n              <a href=\"http://www.goodreads.com/review/show/47266993\">more...</a>\n            ]]>\n    </body>\n    <comments_count>2</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/47266993]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/47266993]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>91837233</id>\n    <user>\n  <id>2250020</id>\n  <name><![CDATA[Tatiana]]></name>\n  <location><![CDATA[Greensboro, NC]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/2250020-tatiana]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1249783659p3/2250020.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1249783659p2/2250020.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>6</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"2010\" />\n        <shelf name=\"nebula\" />\n        <shelf name=\"sci-fi\" />\n      </shelves>\n  <recommended_for><![CDATA[fans of sophisticated science fiction]]></recommended_for>\n  <recommended_by><![CDATA[Ryan]]></recommended_by>\n  <started_at>Mon Apr 05 00:00:00 -0700 2010</started_at>\n  <read_at>Tue Apr 13 00:00:00 -0700 2010</read_at>\n  <date_added>Sun Feb 28 13:28:32 -0800 2010</date_added>\n  <date_updated>Thu Apr 15 13:36:39 -0700 2010</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[I like books for different reasons - characters, writing style, exciting plot. I will remember &quot;Dune&quot; for its remarkable world-building.\r<br/>\r<br/>Dune (or Arrakis) is a desert planet. It is barren, almost waterless, and it is the only source of melange - a spice with unique geriatric qua...\n              <a href=\"http://www.goodreads.com/review/show/91837233\">more...</a>\n            ]]>\n    </body>\n    <comments_count>9</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/91837233]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/91837233]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>82035975</id>\n    <user>\n  <id>3074140</id>\n  <name><![CDATA[David]]></name>\n  <location><![CDATA[Cambridge, England., UT, The United Kingdom]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/3074140-david-menzies]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1261794078p3/3074140.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1261794078p2/3074140.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>2</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at></read_at>\n  <date_added>Fri Dec 25 18:14:39 -0800 2009</date_added>\n  <date_updated>Fri Mar 11 11:00:09 -0800 2011</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[Dune, by Frank Herbert, is by far one of the most thought provoking books that I have ever read. It has been described by critics as a \xE2\x80\x9Ctriumph of the imagination\xE2\x80\x9D, and is often cited as the best-selling science fiction novel ever to be written. It is set thousands of years in the future, in which m...\n              <a href=\"http://www.goodreads.com/review/show/82035975\">more...</a>\n            ]]>\n    </body>\n    <comments_count>2</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/82035975]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/82035975]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>72081089</id>\n    <user>\n  <id>2763302</id>\n  <name><![CDATA[Pavel]]></name>\n  <location><![CDATA[Moscow, 48, Russian Federation]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/2763302-pavel]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1253598397p3/2763302.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1253598397p2/2763302.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>2</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at>Fri Jun 04 00:00:00 -0700 2010</started_at>\n  <read_at>Fri Jun 11 00:00:00 -0700 2010</read_at>\n  <date_added>Mon Sep 21 22:19:05 -0700 2009</date_added>\n  <date_updated>Sun Jun 13 03:48:37 -0700 2010</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[Since majority of my goodreads friends have read this book, I see no reason to re-tell its plot etc. All I have to say is that it is incredibly fun read and probably second fantasy book I really ever liked after Lord of the Rings. Evil is rarely that vivid and hateable, Freemens are totally cool. I ...\n              <a href=\"http://www.goodreads.com/review/show/72081089\">more...</a>\n            ]]>\n    </body>\n    <comments_count>6</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/72081089]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/72081089]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>27313922</id>\n    <user>\n  <id>931383</id>\n  <name><![CDATA[TeraD]]></name>\n  <location><![CDATA[Tacoma, WA]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/931383-terad]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1233789447p3/931383.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1233789447p2/931383.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>3</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"all-time-favorites\" />\n        <shelf name=\"fantasy\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Fri Jul 18 00:00:00 -0700 2008</read_at>\n  <date_added>Tue Jul 15 09:35:09 -0700 2008</date_added>\n  <date_updated>Tue Jul 22 12:20:21 -0700 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[Dune is a fantastic book. The confusion of the first few pages as you enter a new world quickly dissipates as you feel yourself drawn in and understanding begin to seep from the pages of the story. The imagery is amazing, the attention to detail enthralling and the characters deep and well-developed...\n              <a href=\"http://www.goodreads.com/review/show/27313922\">more...</a>\n            ]]>\n    </body>\n    <comments_count>0</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/27313922]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/27313922]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>2866668</id>\n    <user>\n  <id>147289</id>\n  <name><![CDATA[Jason]]></name>\n  <location><![CDATA[Chicago, IL]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/147289-jason-pettus]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1283695594p3/147289.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1283695594p2/147289.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>3</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at></read_at>\n  <date_added>Mon Jul 09 11:30:25 -0700 2007</date_added>\n  <date_updated>Mon Jul 09 11:38:36 -0700 2007</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[Like many, my relationship with this science-fiction classic has changed as my life has progressed: too dense for me when first attempted as a young teen, by the time I was an undergraduate it was one of my all-time favorite novels; but then while reading it again near the age of 40, found a lot mor...\n              <a href=\"http://www.goodreads.com/review/show/2866668\">more...</a>\n            ]]>\n    </body>\n    <comments_count>0</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/2866668]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/2866668]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>2616095</id>\n    <user>\n  <id>165364</id>\n  <name><![CDATA[Beggs]]></name>\n  <location><![CDATA[Singapore]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/165364-beggs]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1183368190p3/165364.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1183368190p2/165364.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>2</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Sun Jul 01 00:00:00 -0700 2007</read_at>\n  <date_added>Mon Jul 02 00:32:03 -0700 2007</date_added>\n  <date_updated>Tue Sep 07 18:16:38 -0700 2010</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[I first read <a href=\"http://www.goodreads.com/book/show/19501.Eat_Pray_Love\" title=\"Eat, Pray, Love by Elizabeth Gilbert\">Dune</a> one summer sitting in an old arm chair in the basement of my grandparents house in rural Minnesota. I found a copy of Dune on the book shelf next to <a href=\"http://www.goodreads.com/author/show/858.Louis_L_Amour\" title=\"Louis L'Amour\">Louis Lamour</a> western and Readers Digest Condensed Books when I was 14 or so. A battered musty original print run version that had bel...\n              <a href=\"http://www.goodreads.com/review/show/2616095\">more...</a>\n            ]]>\n    </body>\n    <comments_count>0</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/2616095]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/2616095]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>646557</id>\n    <user>\n  <id>51289</id>\n  <name><![CDATA[Katie]]></name>\n  <location><![CDATA[Waterbury, VT]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/51289-katie]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1176685035p3/51289.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1176685035p2/51289.jpg]]></small_image_url>\n\
-      </user>\n        <rating>2</rating>\n  <votes>7</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Fri Dec 01 00:00:00 -0800 2006</read_at>\n  <date_added>Mon Apr 09 10:01:43 -0700 2007</date_added>\n  <date_updated>Mon Apr 09 10:13:38 -0700 2007</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[I've loved science fiction my whole life, but I was finally told that I couldn't call myself a SF fan if I hadn't read Dune.  So I read it.  I know Dune is worshipped as a paragon of groundbreaking SF, I can witness and acknowledge Herbert's genius, and I can understand that when it was written it w...\n              <a href=\"http://www.goodreads.com/review/show/646557\">more...</a>\n            ]]>\n    </body>\n    <comments_count>7</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/646557]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/646557]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>5774950</id>\n    <user>\n  <id>354744</id>\n  <name><![CDATA[Exparrot]]></name>\n  <location><![CDATA[The United States]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/354744-exparrot]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1192152370p3/354744.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1192152370p2/354744.jpg]]></small_image_url>\n\
-      </user>\n        <rating>4</rating>\n  <votes>2</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[anyone who enjoys a good intense Scifi novel]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at>Wed Jan 01 00:00:00 -0800 2003</read_at>\n  <date_added>Thu Sep 06 09:49:10 -0700 2007</date_added>\n  <date_updated>Thu Sep 06 10:14:38 -0700 2007</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[To be honest, I only decided to read the series when I, by chance, saw the 1984 Dune movie on TV. Mayhap I was curious to see people riding on gigantic worms, so I went straight away to my local Borders to check out the book. It took me a few days to finish the first book, but I was defintely hooked...\n              <a href=\"http://www.goodreads.com/review/show/5774950\">more...</a>\n            ]]>\n    </body>\n    <comments_count>0</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/5774950]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/5774950]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>22819854</id>\n    <user>\n  <id>811687</id>\n  <name><![CDATA[Sandi]]></name>\n  <location><![CDATA[Fountain Valley, CA]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/811687-sandi]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1211125085p3/811687.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1211125085p2/811687.jpg]]></small_image_url>\n\
-      </user>\n        <rating>5</rating>\n  <votes>2</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n            <shelf name=\"sci-fi\" />\n      </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[September Book of the Month for Science Fiction/Fantasy Group]]></recommended_by>\n  <started_at></started_at>\n  <read_at></read_at>\n  <date_added>Fri May 23 10:55:49 -0700 2008</date_added>\n  <date_updated>Wed Aug 20 06:32:05 -0700 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[I'm officially giving myself permission to not finish this book.  I'm only a few chapters in, but I've read it two or three times already, albeit more than ten years ago.  I just can't do it one more time.\r<br/>\r<br/>I'm not saying &quot;Dune&quot; is bad.  I think it's an excellent choice for the S...\n              <a href=\"http://www.goodreads.com/review/show/22819854\">more...</a>\n            ]]>\n    </body>\n    <comments_count>5</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/22819854]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/22819854]]></link>\n\
-      </review>\n\n    \n      <review>\n  <id>7609615</id>\n    <user>\n  <id>190396</id>\n  <name><![CDATA[Vanessa]]></name>\n  <location><![CDATA[Petaluma, CA]]></location>\n  <link><![CDATA[http://www.goodreads.com/user/show/190396-vanessa]]></link>\n  <image_url><![CDATA[http://photo.goodreads.com/users/1209310514p3/190396.jpg]]></image_url>\n  <small_image_url><![CDATA[http://photo.goodreads.com/users/1209310514p2/190396.jpg]]></small_image_url>\n\
-      </user>\n        <rating>3</rating>\n  <votes>3</votes>\n\n  \n    <spoiler_flag>false</spoiler_flag>\n  <shelves>\n        <shelf name=\"read\" />\n          </shelves>\n  <recommended_for><![CDATA[]]></recommended_for>\n  <recommended_by><![CDATA[]]></recommended_by>\n  <started_at></started_at>\n  <read_at></read_at>\n  <date_added>Thu Oct 11 21:40:29 -0700 2007</date_added>\n  <date_updated>Tue Jun 03 07:03:35 -0700 2008</date_updated>\n  <read_count></read_count>\n      <body>\n      <![CDATA[This was (looks furtively over shoulder in case a hardcore Sci-Fi aficianado is lurking nearby with a baseball bat) just okay.  Certainly, Herbert has created a richly detailed universe  that has delighted legions of fans, but while I admired his construction I was not pulled in by it.  The book was...\n              <a href=\"http://www.goodreads.com/review/show/7609615\">more...</a>\n            ]]>\n    </body>\n    <comments_count>1</comments_count>\n    \n  <url><![CDATA[http://www.goodreads.com/review/show/7609615]]></url>\n  <link><![CDATA[http://www.goodreads.com/review/show/7609615]]></link>\n\
-      </review>\n\n      </reviews>\n  <popular_shelves>\n          <shelf name=\"to-read\" count=\"32809\"/>\n          <shelf name=\"sci-fi\" count=\"1675\"/>\n          <shelf name=\"science-fiction\" count=\"1627\"/>\n          <shelf name=\"currently-reading\" count=\"1002\"/>\n          <shelf name=\"fiction\" count=\"910\"/>\n          <shelf name=\"favorites\" count=\"434\"/>\n          <shelf name=\"fantasy\" count=\"428\"/>\n          <shelf name=\"scifi\" count=\"342\"/>\n          <shelf name=\"sci-fi-fantasy\" count=\"253\"/>\n      </popular_shelves>\n  <book_links>\n    <book_link>\n  <id>1</id>\n  <name><![CDATA[Amazon]]></name>\n  <link>http://www.goodreads.com/book_link/follow/1?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>3</id>\n  <name><![CDATA[Barnes & Noble]]></name>\n  <link>http://www.goodreads.com/book_link/follow/3?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>8</id>\n  <name><![CDATA[WorldCat]]></name>\n  <link>http://www.goodreads.com/book_link/follow/8?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>2</id>\n  <name><![CDATA[Half.com]]></name>\n  <link>http://www.goodreads.com/book_link/follow/2?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>4</id>\n  <name><![CDATA[Abebooks]]></name>\n  <link>http://www.goodreads.com/book_link/follow/4?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>5</id>\n  <name><![CDATA[Alibris]]></name>\n  <link>http://www.goodreads.com/book_link/follow/5?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>6</id>\n  <name><![CDATA[Powells]]></name>\n  <link>http://www.goodreads.com/book_link/follow/6?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>7</id>\n  <name><![CDATA[IndieBound]]></name>\n  <link>http://www.goodreads.com/book_link/follow/7?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>9</id>\n  <name><![CDATA[Indigo.ca]]></name>\n  <link>http://www.goodreads.com/book_link/follow/9?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>10</id>\n  <name><![CDATA[Audible]]></name>\n  <link>http://www.goodreads.com/book_link/follow/10?book_id=53732</link>\n\
-      </book_link><book_link>\n  <id>1602</id>\n  <name><![CDATA[Google eBooks]]></name>\n  <link>http://www.goodreads.com/book_link/follow/1602?book_id=53732</link>\n\
-      </book_link>\n  </book_links>\n  \n    \n  \n\
-      </book>\n\n\
-      </GoodreadsResponse>"
+      content-encoding: 
+      - gzip
+    body: !binary |
+      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
+      tFw42g9BQqbcJDj9/2LD0CMhywAA
+
     http_version: "1.1"

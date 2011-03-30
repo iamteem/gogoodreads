@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'cgi'
 require 'nokogiri'
+require 'rest-client'
 
 module GoGoodreads
   module Request
@@ -13,8 +14,16 @@ module GoGoodreads
     def request(path, params = {}, &block)
       params.merge!(:key => GoGoodreads::Config.api_key)
 
-      uri = build_uri(path, to_querystring(params))
-      yield Nokogiri::XML(open(uri))
+      begin
+        r = ::RestClient.get(BASE_URL + path, :params => params)
+        yield Nokogiri::XML(r.to_str)
+      rescue ::RestClient::Exception => ex
+        if ex.http_code == 401
+          raise BadApiKey
+        else
+          raise
+        end
+      end
     end
 
   private

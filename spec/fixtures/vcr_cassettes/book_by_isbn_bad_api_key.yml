@@ -1,0 +1,34 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.goodreads.com:80/book/isbn?isbn=0441172717&key=1IlntIwcUm5CpTbQhu7Zf
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 401
+      message: Unauthorized
+    headers: 
+      content-type: 
+      - text/html; charset=utf-8
+      status: 
+      - "401"
+      x-powered-by: 
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.0
+      x-runtime: 
+      - "8"
+      content-length: 
+      - "16"
+      set-cookie: 
+      - _session_id=e0e46419d4e0d1cc5e33426bdaf0c94d; domain=.goodreads.com; path=/; HttpOnly
+      cache-control: 
+      - no-cache
+      server: 
+      - nginx/0.8.52 + Phusion Passenger 3.0.0 (mod_rails/mod_rack)
+    body: Invalid API key.
+    http_version: "1.1"
