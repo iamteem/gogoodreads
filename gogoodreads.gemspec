@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gogoodreads}
-  s.version = "0.0.4"
+  s.version = "0.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tim Medina"]
-  s.date = %q{2011-03-25}
+  s.date = %q{2011-03-31}
   s.description = %q{Allows you to progammatically pull book reviews from Goodreads using its API.}
   s.email = %q{iamteem@gmail.com}
   s.extra_rdoc_files = [
@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
-    ".rspec",
     "Gemfile",
     "LICENSE.txt",
     "README.rdoc",
@@ -44,11 +43,13 @@ Gem::Specification.new do |s|
     "lib/go_goodreads/user.rb",
     "lib/go_goodreads/user_status.rb",
     "lib/gogoodreads.rb",
-    "spec/attribute_spec.rb",
-    "spec/book_spec.rb",
-    "spec/config_spec.rb",
-    "spec/fixtures/vcr_cassettes/book_by_isbn.yml",
-    "spec/spec_helper.rb"
+    "test/attribute_test.rb",
+    "test/bad_api_key_test.rb",
+    "test/book_test.rb",
+    "test/config_test.rb",
+    "test/fixtures/vcr_cassettes/book_by_isbn.yml",
+    "test/fixtures/vcr_cassettes/book_by_isbn_bad_api_key.yml",
+    "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/iamteem/gogoodreads}
   s.licenses = ["MIT"]
@@ -56,10 +57,11 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.6.2}
   s.summary = %q{Goodreads API Ruby Interface}
   s.test_files = [
-    "spec/attribute_spec.rb",
-    "spec/book_spec.rb",
-    "spec/config_spec.rb",
-    "spec/spec_helper.rb"
+    "test/attribute_test.rb",
+    "test/bad_api_key_test.rb",
+    "test/book_test.rb",
+    "test/config_test.rb",
+    "test/test_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -67,37 +69,37 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
+      s.add_runtime_dependency(%q<rest-client>, [">= 0"])
       s.add_runtime_dependency(%q<ruby-debug19>, [">= 0"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<vcr>, [">= 0"])
       s.add_development_dependency(%q<webmock>, [">= 0"])
-      s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
     else
       s.add_dependency(%q<nokogiri>, [">= 0"])
+      s.add_dependency(%q<rest-client>, [">= 0"])
       s.add_dependency(%q<ruby-debug19>, [">= 0"])
-      s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<vcr>, [">= 0"])
       s.add_dependency(%q<webmock>, [">= 0"])
-      s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
     end
   else
     s.add_dependency(%q<nokogiri>, [">= 0"])
+    s.add_dependency(%q<rest-client>, [">= 0"])
     s.add_dependency(%q<ruby-debug19>, [">= 0"])
-    s.add_dependency(%q<rspec>, ["~> 2.3.0"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+    s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<vcr>, [">= 0"])
     s.add_dependency(%q<webmock>, [">= 0"])
-    s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
   end
 end
