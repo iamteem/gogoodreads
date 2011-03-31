@@ -46,8 +46,10 @@ Gem::Specification.new do |s|
     "test/attribute_test.rb",
     "test/book_test.rb",
     "test/config_test.rb",
+    "test/exceptions_test.rb",
     "test/fixtures/vcr_cassettes/book_by_isbn.yml",
     "test/fixtures/vcr_cassettes/book_by_isbn_bad_api_key.yml",
+    "test/fixtures/vcr_cassettes/book_by_isbn_not_found.yml",
     "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/iamteem/gogoodreads}
