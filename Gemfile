@@ -10,9 +10,9 @@ group :development do
   gem 'rcov', '>= 0'
   gem 'vcr'
   gem 'webmock'
+  gem 'ruby-debug19', :platforms => :mri_19
 end
 
-gem 'ruby-debug19', :platforms => :mri_19
 
 platforms :mri_19 do
   gem 'test-unit', :group => :test
