@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class BadApiKeyTest < Test::Unit::TestCase
-  def test_raise_exception
+class ExceptionsTest < Test::Unit::TestCase
+  def test_raise_exception_bad_api_key
     GoGoodreads.configure do |config|
       config.api_key = "1IlntIwcUm5CpTbQhu7Zf"
     end

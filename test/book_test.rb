@@ -30,4 +30,11 @@ class BookTest < Test::Unit::TestCase
       assert_nil   book.publication_date
     end
   end
+
+  def test_show_by_isbn_nil_on_not_found
+    VCR.use_cassette('book_by_isbn_not_found') do
+      book = GoGoodreads::Book.show_by_isbn("9780935998603")
+      assert_nil book
+    end
+  end
 end

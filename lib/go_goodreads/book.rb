@@ -39,6 +39,13 @@ module GoGoodreads
         book.current_page = params[:page] || 1
         book
       end
+
+    rescue ::RestClient::Exception => ex
+      if ex.http_code == 404
+        return nil
+      else
+        raise
+      end
     end
 
     def self.initialize_with_node(xml)

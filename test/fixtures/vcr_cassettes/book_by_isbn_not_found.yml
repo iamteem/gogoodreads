@@ -1,0 +1,36 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.goodreads.com:80/book/isbn?isbn=9780935998603&key=1IlntIwcUm5CpTbQhu7Zg
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: Not Found
+    headers: 
+      content-type: 
+      - application/xml; charset=utf-8
+      status: 
+      - "404"
+      x-powered-by: 
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.0
+      x-runtime: 
+      - "13"
+      content-length: 
+      - "30"
+      set-cookie: 
+      - _session_id=e6abd26c8dd41149ff33398f8a37f260; domain=.goodreads.com; path=/; HttpOnly
+      cache-control: 
+      - no-cache
+      server: 
+      - nginx/0.8.52 + Phusion Passenger 3.0.0 (mod_rails/mod_rack)
+    body: |
+      <error>book not found</error>
+
+    http_version: "1.1"

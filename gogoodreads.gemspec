@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gogoodreads}
-  s.version = "0.0.6"
+  s.version = "0.0.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tim Medina"]
@@ -44,7 +44,6 @@ Gem::Specification.new do |s|
     "lib/go_goodreads/user_status.rb",
     "lib/gogoodreads.rb",
     "test/attribute_test.rb",
-    "test/bad_api_key_test.rb",
     "test/book_test.rb",
     "test/config_test.rb",
     "test/fixtures/vcr_cassettes/book_by_isbn.yml",
@@ -58,9 +57,9 @@ Gem::Specification.new do |s|
   s.summary = %q{Goodreads API Ruby Interface}
   s.test_files = [
     "test/attribute_test.rb",
-    "test/bad_api_key_test.rb",
     "test/book_test.rb",
     "test/config_test.rb",
+    "test/exceptions_test.rb",
     "test/test_helper.rb"
   ]
 
